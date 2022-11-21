@@ -13,7 +13,9 @@
 
 
 }
-
+.index-posts-w {
+    width: 40%;
+}
 
 .single-post-w .post-content .wp-image {
 
@@ -43,7 +45,7 @@
 .wp-image {
     display: flex;
     border-radius: 6px;
-    width: 800px;
+    width: 600px;
     height: 550px;
     justify-content: center;
    

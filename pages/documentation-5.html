@@ -97,6 +97,7 @@
                     <h3 class="index-post__title"><a href="./documentation-3.html">Getting “One of the plugins is invalid” error when
                             installing
                             add-ons</a>
+
                     </h3>
                 </div>
                 <hr>
@@ -105,7 +106,7 @@
                 </div>
                 <hr>
                 <div class="index-post">
-                    <h3 class="index-post__title"><a href="../pages/documentation-5.html">Auto-sync of events from Google Calendar is not working</a>
+                    <h3 class="index-post__title"><a href="">Auto-sync of events from Google Calendar is not working</a>
                     </h3>
                 </div>
                 <hr>
@@ -219,27 +220,49 @@
         </div>
         <div class="single-post-w">
             <div class="single-post-i">
-                <h1>Error: Parse error: syntax error, unexpected ‘int’ (T_STRING), expecting function…</h1>
+                <h1>Auto-sync of events from Google Calendar is not working</h1>
                 <div class="single-post-meta">
                     <div class="sp-categories">
                         <ul class="post-categories">
                             <li>
-                                <a href="" rel="category tag">Error</a>
+                                <a href="" rel="category tag">Google Calendar</a>
                             </li>
-                            
+                             
                         </ul>
                     </div>
                     <div class="sp-tags">
-                        <a href="" rel="tag">error</a>
-
-
+           
                     </div>
                 </div>
                 <div class="post-content">
                     <p>
-                        If you receive this error when activating LatePoint, it means you are running an outdated version of PHP on your server. Make sure you are using version 7.4+, preferably 8+, not only it helps make your site more secure but also helps speeding up it’s performance. To see officially supported PHP versions: <a href="" target="_blank"
-                            rel="noreferrernoopener">https://www.php.nt/supported-versions.php</a>
+                        When you create a Google App that is used to connect your agent’s calendars – you have two options for it’s user type: External or Internal. You can always change the user type of your application by going to OAuth consent screen in your Google project. 
                     </p>
+                    <pre class="wp-block-code hljs">
+                        <code>
+                            YOUR_SITE.com/wp-admin/admin-post.php?action=latepoint_route_call&route_name=google_calendar__event_watch_updated&agent_id=YOUR_AGENT_ID&calendar_id=YOUR_CALENDAR_ID 
+                        </code>
+                    </pre>
+                 <p>
+                    is not blocked and is not redirected on your site.
+
+                 
+                 </p>
+                  
+                 <p>
+                    You also need to make sure that you don’t have it blocked by some security plugins or mods in your server like modSecurity. To check if the url is blocked you can open your access log file in your server and see what is the response code for that request right after you’ve added/updated a google event. It should show a 200 code to work correctly:
+                 </p>
+                 <img class="wp-img-1" src="../assets/img/documentation-5/img-1.png" alt="">
+                 <p>
+                    You can find your calendar ID by inspecting the calendar toggle field using browser inspect tool: 
+                 </p>
+                 <img class="wp-img-2" src="../assets/img/documentation-5/img-2.png" alt="">
+                 
+                 <p>
+                    Your can find more information here: 
+                 </p>
+                   <img class="wp-img-3" src="../assets/img/documentation-5/img-3.png" alt="">
+                   
 
                 </div>
             </div>
