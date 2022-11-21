@@ -1,11 +1,12 @@
 .single-post-container-w {
     display: flex;
     box-sizing: border-box;
+  
     font-weight: 400;
     line-height: 1.4;
     color: #373844;
     font-size: 14px;
-
+     
     justify-content: center;
 
 
@@ -13,12 +14,13 @@
 
 }
 
+
 .single-post-w .post-content .wp-image {
 
     background: #fff;
     box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2), 0px 20px 50px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
-    margin: 40px auto;
+    margin: 60px;
     padding: 10px;
 
 
@@ -41,10 +43,10 @@
 .wp-image {
     display: flex;
     border-radius: 6px;
-    width: 600px;
-    height: 400px;
+    width: 800px;
+    height: 550px;
     justify-content: center;
-    margin: 20px;
+   
 
 }
 
