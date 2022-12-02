@@ -14,7 +14,18 @@
 
 }
 .index-posts-w {
-    width: 40%;
+    @include small {
+        display: none;
+    }
+
+    @include medium {
+        display: block;
+    }
+
+    @include medium {
+        width: 40%;
+    }
+   
 }
 
 .single-post-w .post-content .wp-image {
@@ -24,7 +35,7 @@
     border-radius: 8px;
     margin: 60px;
     padding: 10px;
-
+     
 
 
 

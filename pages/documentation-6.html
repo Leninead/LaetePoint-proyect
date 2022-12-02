@@ -220,48 +220,29 @@
         </div>
         <div class="single-post-w">
             <div class="single-post-i">
-                <h1>Auto-sync of events from Google Calendar is not working</h1>
+                <h1>New service is being created when trying to update exiting service.</h1>
                 <div class="single-post-meta">
                     <div class="sp-categories">
                         <ul class="post-categories">
                             <li>
-                                <a href="" rel="category tag">Google Calendar</a>
+                                <a href="http://wpdocs.latepoint.com/category/error/" rel="category tag">Error</a>
                             </li>
                              
                         </ul>
                     </div>
                     <div class="sp-tags">
-           
+                    <a href="http://wpdocs.latepoint.com/tag/bugs/" rel="tag">bugs</a>
+                    <a href="http://wpdocs.latepoint.com/tag/service/" rel="tag">service\</a>
                     </div>
                 </div>
                 <div class="post-content">
                     <p>
-                        If you have followed our guide on setting up two-way sync with Google calendar, LatePoint should automatically block time slots of the events that you create in Google Calendar. If you see your calendar events in “grey” instead of “green” it means something is preventing Google to push updates to your server. Some membership plugins might block admin-post.php access, make sure that URL:
+                        This issue might happen when you have a lot of locations or agents and your PHP limit set for max_input_vars directive is not enough to handle form submission, If there are more input variables than specified by this directive, an E_WARNING is issued, and further input variables are truncated from the request. For more info <a href="https://www.php.net/manual/en/info.configuration.php#ini.max-input-vars">click here.</a>  Your hosting company can assist you with increasing it, you can set it to 2000 or higher if needed. 
                     </p>
-                    <pre class="wp-block-code hljs">
-                        <code>
-                            YOUR_SITE.com/wp-admin/admin-post.php?action=latepoint_route_call&route_name=google_calendar__event_watch_updated&agent_id=YOUR_AGENT_ID&calendar_id=YOUR_CALENDAR_ID 
-                        </code>
-                    </pre>
-                 <p>
-                    is not blocked and is not redirected on your site.
-
-                 
-                 </p>
-                  
-                 <p>
-                    You also need to make sure that you don’t have it blocked by some security plugins or mods in your server like modSecurity. To check if the url is blocked you can open your access log file in your server and see what is the response code for that request right after you’ve added/updated a google event. It should show a 200 code to work correctly:
-                 </p>
-                 <img class="wp-img-1" src="../assets/img/documentation-5/img-1.png" alt="">
-                 <p>
-                    You can find your calendar ID by inspecting the calendar toggle field using browser inspect tool: 
-                 </p>
-                 <img class="wp-img-2" src="../assets/img/documentation-5/img-2.png" alt="">
-                 
-                 <p>
-                    Your can find more information here: 
-                 </p>
-                   <img class="wp-img-3" src="../assets/img/documentation-5/img-3.png" alt="">
+                    <p>
+                        To debug this and other possible issues we strongly recommend <a href="http://wpdocs.latepoint.com/how-to-enable-debug-log/%20and%20then%20checking%20your%20debug.log">enabling debug mode</a> when testing, to check if there are any other errors.
+                    </p>
+                    
                    
 
                 </div>

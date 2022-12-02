@@ -134,56 +134,56 @@
                 </div>
                 <hr>
                 <div class="index-post">
-                    <h3 class="index-post__title"><a href="">How to find my license key/purchase code for LatePoint?</a>
+                    <h3 class="index-post__title"><a href="./documentation-11.html">How to find my license key/purchase code for LatePoint?</a>
                     </h3>
                 </div>
                 <hr>
                 <div class="index-post">
-                    <h3 class="index-post__title"><a href="">Add to Calendar link is not working</a></h3>
+                    <h3 class="index-post__title"><a href="./documentation-12.html">Add to Calendar link is not working</a></h3>
                 </div>
                 <hr>
                 <div class="index-post">
-                    <h3 class="index-post__title"><a href="">WordPress Users still can’t login, even when “Use WordPress
+                    <h3 class="index-post__title"><a href="./documentation-13.html">WordPress Users still can’t login, even when “Use WordPress
                             users as
                             customers” option is checked</a></h3>
                 </div>
                 <hr>
                 <div class="index-post">
-                    <h3 class="index-post__title"><a href="">How to change time slot style on the calendar?</a></h3>
+                    <h3 class="index-post__title"><a href="./documentation-14.html">How to change time slot style on the calendar?</a></h3>
                 </div>
                 <hr>
                 <div class="index-post">
-                    <h3 class="index-post__title"><a href="">List of all available shortcodes for LatePoint</a></h3>
+                    <h3 class="index-post__title"><a href="./documentation-15.html">List of all available shortcodes for LatePoint</a></h3>
                 </div>
                 <hr>
                 <div class="index-post">
-                    <h3 class="index-post__title"><a href="">How to generate API Key and Secret credentials for Zoom in
+                    <h3 class="index-post__title"><a href="./documentation-15.html">How to generate API Key and Secret credentials for Zoom in
                             LatePoint</a>
                     </h3>
                 </div>
                 <hr>
                 <div class="index-post">
-                    <h3 class="index-post__title"><a href="">Zoom Meetings Addon Setup</a></h3>
+                    <h3 class="index-post__title"><a href="./documentation-16.html">Zoom Meetings Addon Setup</a></h3>
                 </div>
                 <hr>
                 <div class="index-post">
-                    <h3 class="index-post__title"><a href="">Generate Client ID and Secret for Google Calendar
+                    <h3 class="index-post__title"><a href="./documentation-17.html">Generate Client ID and Secret for Google Calendar
                             integration</a>
                     </h3>
                 </div>
                 <hr>
                 <div class="index-post">
-                    <h3 class="index-post__title"><a href="">How to setup Facebook Pixel</a></h3>
+                    <h3 class="index-post__title"><a href="./documentation-18.html">How to setup Facebook Pixel</a></h3>
                 </div>
                 <hr>
                 <div class="index-post">
-                    <h3 class="index-post__title"><a href="">When customers try login in to Customer Dashboard they are
+                    <h3 class="index-post__title"><a href="./documentation-19.html">When customers try login in to Customer Dashboard they are
                             re-directed to
                             the same login page again</a></h3>
                 </div>
                 <hr>
                 <div class="index-post">
-                    <h3 class="index-post__title"><a href="">What does “Charge Amount” and Minimum and Maximum Price
+                    <h3 class="index-post__title"><a href="./documentation-20.html">What does “Charge Amount” and Minimum and Maximum Price
                             values
                             mean?</a>
                     </h3>
@@ -220,50 +220,58 @@
         </div>
         <div class="single-post-w">
             <div class="single-post-i">
-                <h1>Auto-sync of events from Google Calendar is not working</h1>
+                <h1>How to use webhooks add-on.</h1>
                 <div class="single-post-meta">
                     <div class="sp-categories">
                         <ul class="post-categories">
                             <li>
-                                <a href="" rel="category tag">Google Calendar</a>
+                                <a href="http://wpdocs.latepoint.com/category/addons/" rel="category tag">Addons</a>
+                            </li>
+                            <li>
+                                <a href="http://wpdocs.latepoint.com/category/integrations/" rel="tag">Integrations</a>
                             </li>
                              
                         </ul>
                     </div>
                     <div class="sp-tags">
-           
+                    <a href="http://wpdocs.latepoint.com/tag/debug/" rel="tag">automation</a>
+                    <a href="http://wpdocs.latepoint.com/tag/ifttt/" rel="tag">ifttt</a>
+                    <a href="http://wpdocs.latepoint.com/tag/integrations/" rel="tag">integrations</a>
+                    <a href="http://wpdocs.latepoint.com/tag/webhooks/" rel="tag">webhooks</a>
+                    <a href="http://wpdocs.latepoint.com/tag/zapier/" rel="tag">zapier</a>
                     </div>
                 </div>
                 <div class="post-content">
                     <p>
-                        If you have followed our guide on setting up two-way sync with Google calendar, LatePoint should automatically block time slots of the events that you create in Google Calendar. If you see your calendar events in “grey” instead of “green” it means something is preventing Google to push updates to your server. Some membership plugins might block admin-post.php access, make sure that URL:
+                        Webhooks allow you to trigger external events when you receive a new booking, or when a new customer account is created. For example you can automatically add your new LatePoint customer to your CRM software, trigger an email, or add them to your external mailing list for marketing. The possibilities are endless.
                     </p>
-                    <pre class="wp-block-code hljs">
-                        <code>
-                            YOUR_SITE.com/wp-admin/admin-post.php?action=latepoint_route_call&route_name=google_calendar__event_watch_updated&agent_id=YOUR_AGENT_ID&calendar_id=YOUR_CALENDAR_ID 
-                        </code>
-                    </pre>
-                 <p>
-                    is not blocked and is not redirected on your site.
-
-                 
-                 </p>
-                  
-                 <p>
-                    You also need to make sure that you don’t have it blocked by some security plugins or mods in your server like modSecurity. To check if the url is blocked you can open your access log file in your server and see what is the response code for that request right after you’ve added/updated a google event. It should show a 200 code to work correctly:
-                 </p>
-                 <img class="wp-img-1" src="../assets/img/documentation-5/img-1.png" alt="">
-                 <p>
-                    You can find your calendar ID by inspecting the calendar toggle field using browser inspect tool: 
-                 </p>
-                 <img class="wp-img-2" src="../assets/img/documentation-5/img-2.png" alt="">
-                 
-                 <p>
-                    Your can find more information here: 
-                 </p>
-                   <img class="wp-img-3" src="../assets/img/documentation-5/img-3.png" alt="">
-                   
-
+                    <p>
+                        When you install our webhooks addon, you should see a new menu item appear in your LatePoint admin:
+                    </p>
+                    <figure class="wp-block-image">
+                        <img class="wp-image390" src="../assets/img/documentation-10/image-1.png" alt="">
+                    </figure>
+                    <p>This page will have a list of all web hooks that you’ve added to LatePoint. You can click on “Add Webhook” button to create new webhook. </p>
+                    <figure class="wp-block-image">
+                        <img class="wp-image-391" src="../assets/img/documentation-10/image-2.png" alt="">
+                    </figure>
+                    <p>In order for you to connect your LatePoint data with external services like Google Sheets, Mailchimp, your CRM etc, you need an automation service, which will act as a middle man, it will receive data from LatePoint and push it to your external service, it could be your CRM, mailing list etc.</p>
+                    <p>
+                        In this guide we will showcase how to use <a href="https://zapier.com/">Zapier</a>  to integrate LatePoint with Gmail, to send custom email. You need to register on Zapier and create a zap.
+                    </p> 
+                    <figure class="wp-block-image">
+                        <img class="wp-image-392" src="../assets/img/documentation-10/image-3.png" alt="">
+                    </figure>
+                    <p>You need to pick “Create a custom zap”:</p>
+                    <figure class="wp-block-image">
+                        <img class="wp-image-393" src="../assets/img/documentation-10/image-4.png" alt="">
+                    </figure>
+                    <p>
+                        Give your “zap” any name you like. And search for “webhook” in the search box. You need to pick “Webhooks by Zapier”, to create a webhook receiver. 
+                    </p>
+                    <figure class="wp-block-image">
+                        <img class="wp-image-394" src="../assets/img/documentation-10/image-5.png" alt="">
+                    </figure>
                 </div>
             </div>
         </div>

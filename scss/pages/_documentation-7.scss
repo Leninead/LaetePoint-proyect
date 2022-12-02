@@ -1,0 +1,71 @@
+a {
+    color: #2F58FF;
+text-decoration: none;
+background-color: transparent;
+}
+
+.single-post-w .single-post-meta .sp-categories ul li {
+    line-height: 1.2;
+}
+.single-post-w .single-post-meta .sp-categories ul {
+    list-style: none;
+}
+
+
+.single-post-w .single-post-meta .sp-tags a {
+    display: inline-block;
+margin-left: 10px;
+padding: 3px 5px;
+line-height: 1.2;
+border: 1px solid #2F58FF;
+text-decoration: none;
+border-radius: 4px;
+}
+.single-post-w .post-content{
+    font-size: 18px;
+}
+p{
+    margin-top: 0;
+margin-bottom: 10px;
+}
+.single-post-w .post-content {
+    font-size: 18px;
+}
+
+.single-post-w pre {
+    overflow-x: auto;
+font: normal 10pt Consolas, Monaco, monospace;
+padding: 15px;
+border-radius: 4px;
+}
+.hljs{
+    display: block;
+    color: #abb2bf;
+    background: #282c34;
+  }
+  .wp-block-code code{
+    display: block;
+font-family: inherit;
+overflow-wrap: break-word;
+white-space: pre-wrap;
+  }
+
+  code{
+    font-size: 1em;
+  }
+ 
+  .hljs-string{
+    color: #98c379;
+  }
+  .wp-block-code code{
+    font-family: inherit;
+overflow-wrap: break-word;
+white-space: pre-wrap;
+  }
+
+  .hljs-literal{
+    color: #56b6c2;
+  }
+  strong{
+    font-weight: bolder;
+  }

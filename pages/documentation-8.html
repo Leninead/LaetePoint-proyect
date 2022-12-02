@@ -220,49 +220,75 @@
         </div>
         <div class="single-post-w">
             <div class="single-post-i">
-                <h1>Auto-sync of events from Google Calendar is not working</h1>
+                <h1>How to develop custom payment add-ons for LatePoint.</h1>
                 <div class="single-post-meta">
                     <div class="sp-categories">
                         <ul class="post-categories">
                             <li>
-                                <a href="" rel="category tag">Google Calendar</a>
+                                <a href="http://wpdocs.latepoint.com/category/customization/" rel="category tag">Customatizacion</a>
+                            </li>
+                            <li>
+                                <a href="http://wpdocs.latepoint.com/category/integrations/
+                                
+                                " rel="category tag">Inregrations</a>
                             </li>
                              
                         </ul>
                     </div>
                     <div class="sp-tags">
-           
+                    <a href="http://wpdocs.latepoint.com/tag/customize/" rel="tag">customatize</a>
+                    <a href="http://wpdocs.latepoint.com/tag/payment/" rel="tag">payment</a>
                     </div>
                 </div>
                 <div class="post-content">
                     <p>
-                        If you have followed our guide on setting up two-way sync with Google calendar, LatePoint should automatically block time slots of the events that you create in Google Calendar. If you see your calendar events in “grey” instead of “green” it means something is preventing Google to push updates to your server. Some membership plugins might block admin-post.php access, make sure that URL:
+                        For this example we will integrate <a rel="noreferrer noopener" href="https://flutterwave.com/us/" target="_blank">Flutterwave</a>  payment processor into LatePoint. First of all you have to <a href="https://github.com/latepoint/latepoint-addon-starter">download our latepoint-addon-starter plugin. </a> Unzip it and rename the folder to “latepoint-payments-flutterwave” and replace all instances of -addon-starter with –payments-flutterwave. Open the main file, which is now called latepoint-payments-flutterwave.php and renamed all variables and strings from addon-starter to payments-flutterwave
                     </p>
-                    <pre class="wp-block-code hljs">
-                        <code>
-                            YOUR_SITE.com/wp-admin/admin-post.php?action=latepoint_route_call&route_name=google_calendar__event_watch_updated&agent_id=YOUR_AGENT_ID&calendar_id=YOUR_CALENDAR_ID 
-                        </code>
-                    </pre>
-                 <p>
-                    is not blocked and is not redirected on your site.
-
-                 
-                 </p>
-                  
-                 <p>
-                    You also need to make sure that you don’t have it blocked by some security plugins or mods in your server like modSecurity. To check if the url is blocked you can open your access log file in your server and see what is the response code for that request right after you’ve added/updated a google event. It should show a 200 code to work correctly:
-                 </p>
-                 <img class="wp-img-1" src="../assets/img/documentation-5/img-1.png" alt="">
-                 <p>
-                    You can find your calendar ID by inspecting the calendar toggle field using browser inspect tool: 
-                 </p>
-                 <img class="wp-img-2" src="../assets/img/documentation-5/img-2.png" alt="">
-                 
-                 <p>
-                    Your can find more information here: 
-                 </p>
-                   <img class="wp-img-3" src="../assets/img/documentation-5/img-3.png" alt="">
-                   
+                    <figure class="wp-block-image">
+                    <img src="../assets/img/documentation-8/documentation-8.png" alt="" srcset="">
+                    </figure>
+                    <p>
+                        <strong> !IMPORTANT</strong>
+                        :don’t forget to rename the main add-on object $LATEPOINT_ADDON_ADDON_STARTER, at the very bottom of the main add-on plugin file, which you just renamed to latepoint-payments-flutterwave.php:
+                    </p>
+                    <figure class="wp-block-image">
+                        <img class="wp-image-446" src="../assets/img/documentation-8/image-2.png" alt="">
+                        <figcaption>
+                            latepoint-payments-flutterwave.php
+                        </figcaption>
+                    </figure>
+                    <h2>Implementing Payments</h2>
+                   <p>
+                    In this tutorial we will be implementing <a href="https://developer.flutterwave.com/docs/flutterwave-inline#sample-inline-callback-implementation">“inline callback”</a>  type of Flutterwave payment processing. Basically what it does is the following: when your customer tries to pay for their booking, it opens a flutterwave payment modal using javascript, which on success or error will call our own javascript function to handle a response.
+                   </p>
+                   <p>Flutterwave integration requires us to have public and secret API keys to launch their payment module. Business owner will need to generate it in Flutterwave settings→api page. We need a way to capture these API keys in LatePoint settings. Let’s register flutterwave as a new payment method with fields for capturing API keys in Latepoint Settings → Payments page.</p>
+                   <figure class="wp-block-image">
+                    <img src="../assets/img/documentation-8/image-3.png" alt="">
+                    <figcaption>LatePoint Admin / Settings / Payments</figcaption>
+                   </figure>
+                   <p>Set a unique code name for your processor:</p>
+                   <pre class="wp-block-code hljs bash">
+                    <code>
+                        ?php class LatePointPaymentsFlutterwave { public
+                            <span class="hljs-variable">
+                                $version 
+                            </span> =
+                            <span class="hljs-string">'1.0.0'</span>
+                            ; public
+                            <span class="hljs-variable">$db_version</span>
+                            =
+                            <span class="hljs-string">'1.0.0'</span>
+                            ; public
+                            <span class="hljs-variable">$addon_name</span>
+                            =
+                            <span class="hljs-string">'latepoint-payments-flutterwave'</span>
+                            ; public
+                            <span class="hljs-variable" >$processor_code</span>
+                            =
+                            <span class="">'flutterwave'</span>
+                            ; // latepoint-payments-flutterwave.php
+                    </code>
+                   </pre>
 
                 </div>
             </div>
