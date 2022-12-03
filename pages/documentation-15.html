@@ -220,58 +220,153 @@
         </div>
         <div class="single-post-w">
             <div class="single-post-i">
-                <h1>How to use webhooks add-on.</h1>
+                <h1>List of all available shortcodes for LatePoint.</h1>
                 <div class="single-post-meta">
                     <div class="sp-categories">
                         <ul class="post-categories">
                             <li>
-                                <a href="http://wpdocs.latepoint.com/category/addons/" rel="category tag">Addons</a>
+                                <a href="http://wpdocs.latepoint.com/category/get-started/" rel="category tag">Get started</a>
                             </li>
                             <li>
-                                <a href="http://wpdocs.latepoint.com/category/integrations/" rel="tag">Integrations</a>
+                                <a href="http://wpdocs.latepoint.com/category/shortcodes/" rel="tag">Shortcodes</a>
                             </li>
                              
                         </ul>
                     </div>
                     <div class="sp-tags">
-                    <a href="http://wpdocs.latepoint.com/tag/debug/" rel="tag">automation</a>
-                    <a href="http://wpdocs.latepoint.com/tag/ifttt/" rel="tag">ifttt</a>
-                    <a href="http://wpdocs.latepoint.com/tag/integrations/" rel="tag">integrations</a>
-                    <a href="http://wpdocs.latepoint.com/tag/webhooks/" rel="tag">webhooks</a>
-                    <a href="http://wpdocs.latepoint.com/tag/zapier/" rel="tag">zapier</a>
+                    <a href="http://wpdocs.latepoint.com/tag/shortcodes/" rel="tag">shortcodes</a>
+
                     </div>
                 </div>
                 <div class="post-content">
+                    <h3>Booking Form</h3>
+                    <pre class="wp-block-code hljs json">
+                        <code>
+                            [latepoint_book_form]
+                        </code>
+                    </pre>
                     <p>
-                        Webhooks allow you to trigger external events when you receive a new booking, or when a new customer account is created. For example you can automatically add your new LatePoint customer to your CRM software, trigger an email, or add them to your external mailing list for marketing. The possibilities are endless.
+                        Example usage with attributes: 
                     </p>
+                    <code>
+                        [latepoint_book_form selected_agent="1" hide_side_panel="yes"] 
+                    </code>
+                    .
+                    <p>All available attributes:</p>
+                    <pre class="wp-block-code hljs json">
+                        <code>
+                            show_locations
+                            show_agents
+                            show_services
+                            show_service_categories
+                            selected_location
+                            selected_agent
+                            selected_service
+                            selected_service_category
+                            selected_duration
+                            selected_total_attendees
+                            calendar_start_date
+                            hide_side_panel
+                            hide_summary
+                        </code>
+                    </pre>
+                    <h3>Booking Button</h3>
+                    <pre class="wp-block-code hljs json">
+                        <code>
+                            [latepoint_book_button]
+                        </code>
+                    </pre>
                     <p>
-                        When you install our webhooks addon, you should see a new menu item appear in your LatePoint admin:
+                        Example usage with attributes: 
                     </p>
+                    <code>
+                        Example usage with attributes: [latepoint_book_button selected_agent="1" css="margin-top: 10px" border="1px solid #111" calendar_start_date="2021-01-24"] 
+                    </code>
+                    .
+                    <p>All available attributes:</p>
+                    <pre class="wp-block-code hljs json">
+                        <code>
+                            show_locations
+                            show_agents
+                            show_services
+                            show_service_categories
+                            selected_location
+                            selected_agent
+                            selected_service
+                            selected_service_category
+                            selected_duration
+                            selected_total_attendees
+                            calendar_start_date
+                            hide_side_panel
+                            hide_summary
+                        </code>
+                    </pre>
+                    <h3>Booking Button</h3>
+                    <pre class="wp-block-code hljs json">
+                        <code>
+                            caption
+                            bg_color
+                            text_color
+                            font_size
+                            border
+                            border_radius
+                            margin
+                            padding
+                            css
+                            show_locations
+                            show_agents
+                            show_services
+                            show_service_categories
+                            selected_location
+                            selected_agent
+                            selected_service
+                            selected_service_category
+                            selected_duration
+                            selected_total_attendees
+                            calendar_start_date
+                            hide_side_panel
+                            hide_summary
+                        </code>
+                    </pre>
+                    <h3>Customer Dashboard</h3>
+                    
+                    <pre class="wp-block-code hljs json">
+                        <code>
+                            [latepoint_customer_dashboard]
+                        </code>
+                    </pre>
+                    <p>Shows customer dashboard, if customer is logged in, if not – it will show a login form.</p>
+                    <h3>List of Services/Agents/Locations</h3>
+                    <pre class="wp-block-code hljs json">
+                        <code>
+                            [latepoint_resources items="agents" columns="4"]
+                        </code>
+                    </pre>
+                    <p>Outputs a list of items (depending on what you have entered for “items” attribute, in a grid of N columns (depending on your “columns” attribute):</p>
+
                     <figure class="wp-block-image">
-                        <img class="wp-image390" src="../assets/img/documentation-10/image-1.png" alt="">
+                        <img class="wp-image-553" src="../assets/img/documentation-15/image-15.png" alt="">
                     </figure>
-                    <p>This page will have a list of all web hooks that you’ve added to LatePoint. You can click on “Add Webhook” button to create new webhook. </p>
-                    <figure class="wp-block-image">
-                        <img class="wp-image-391" src="../assets/img/documentation-10/image-2.png" alt="">
-                    </figure>
-                    <p>In order for you to connect your LatePoint data with external services like Google Sheets, Mailchimp, your CRM etc, you need an automation service, which will act as a middle man, it will receive data from LatePoint and push it to your external service, it could be your CRM, mailing list etc.</p>
-                    <p>
-                        In this guide we will showcase how to use <a href="https://zapier.com/">Zapier</a>  to integrate LatePoint with Gmail, to send custom email. You need to register on Zapier and create a zap.
-                    </p> 
-                    <figure class="wp-block-image">
-                        <img class="wp-image-392" src="../assets/img/documentation-10/image-3.png" alt="">
-                    </figure>
-                    <p>You need to pick “Create a custom zap”:</p>
-                    <figure class="wp-block-image">
-                        <img class="wp-image-393" src="../assets/img/documentation-10/image-4.png" alt="">
-                    </figure>
-                    <p>
-                        Give your “zap” any name you like. And search for “webhook” in the search box. You need to pick “Webhooks by Zapier”, to create a webhook receiver. 
-                    </p>
-                    <figure class="wp-block-image">
-                        <img class="wp-image-394" src="../assets/img/documentation-10/image-5.png" alt="">
-                    </figure>
+                </pre>
+                <p>Shows customer dashboard, if customer is logged in, if not – it will show a login form.</p>
+                <h3>List of Services/Agents/Locations</h3>
+                <pre class="wp-block-code hljs json">
+                    <code>
+                        [latepoint_resources items="services" columns="4"]
+                    </code>
+                </pre>
+                <figure class="wp-block-image">
+                    <img class="wp-image-554" src="../assets/img/documentation-15/image-2.png" alt="">
+                </figure>
+                <pre class="wp-block-code hljs json">
+                    <code>
+                        [latepoint_resources items="locations" columns="3"]
+                    </code>
+                </pre>
+                <figure class="wp-block-image">
+                    <img class="wp-image-555" src="../assets/img/documentation-15/image-3.png" alt="">
+                </figure>
+                
                 </div>
             </div>
         </div>
