@@ -167,21 +167,19 @@
                 </div>
                 <hr>
                 <div class="index-post">
-                    <h3 class="index-post__title"><a href="./documentation-18.html">Generate Client ID and Secret for Google Calendar
-                            integration</a>
+                    <h3 class="index-post__title"><a href="./documentation-18.html">Generate Client ID and Secret for Google Calendar integration</a></h3>
+                  </div>
+                  <hr>
+                <div class="index-post">
+                    <h3 class="index-post__title"><a href="./documentation-19.html">How to setup Facebook Pixel</a>
                     </h3>
                 </div>
                 <hr>
                 <div class="index-post">
-                    <h3 class="index-post__title"><a href="./documentation-19.html">How to setup Facebook Pixel</a></h3>
+                    <h3 class="index-post__title"><a href="./documentation-20.html">When customers try login in to Customer Dashboard they are re-directed to the same login page again</a></h3>
                 </div>
                 <hr>
-                <div class="index-post">
-                    <h3 class="index-post__title"><a href="./documentation-20.html">When customers try login in to Customer Dashboard they are
-                            re-directed to
-                            the same login page again</a></h3>
-                </div>
-                <hr>
+               
                 <div class="index-post">
                     <h3 class="index-post__title"><a href="./documentation-21.html">What does “Charge Amount” and Minimum and Maximum Price
                             values
@@ -220,31 +218,35 @@
         </div>
         <div class="single-post-w">
             <div class="single-post-i">
-                <h1>New service is being created when trying to update exiting service.</h1>
+                <h1>Notification and Confirmation emails are not being sent.</h1>
                 <div class="single-post-meta">
                     <div class="sp-categories">
                         <ul class="post-categories">
                             <li>
-                                <a href="http://wpdocs.latepoint.com/category/error/" rel="category tag">Error</a>
+                                <a href="http://wpdocs.latepoint.com/category/email/" rel="category tag">email</a>
                             </li>
+                           
                              
                         </ul>
                     </div>
                     <div class="sp-tags">
-                    <a href="http://wpdocs.latepoint.com/tag/bugs/" rel="tag">bugs</a>
-                    <a href="http://wpdocs.latepoint.com/tag/service/" rel="tag">service\</a>
+                    <a href="http://wpdocs.latepoint.com/tag/email/" rel="tag">email</a>
+                   <a href="http://wpdocs.latepoint.com/tag/reminders/" rel="tag">reminders</a>
+                   <a href="http://wpdocs.latepoint.com/tag/notifications/" rel="tag">notifications</a>
+                  
                     </div>
                 </div>
                 <div class="post-content">
                     <p>
-                        This issue might happen when you have a lot of locations or agents and your PHP limit set for max_input_vars directive is not enough to handle form submission, If there are more input variables than specified by this directive, an E_WARNING is issued, and further input variables are truncated from the request. For more info <a href="https://www.php.net/manual/en/info.configuration.php#ini.max-input-vars">click here.</a>  Your hosting company can assist you with increasing it, you can set it to 2000 or higher if needed. 
+                        Emails are sent using your internal email server in WordPress, make sure you have it setup. Our plugin is not sending the emails, it just tells wordpress what needs to be sent and wordpress takes care of it. So if it does not work – it means your email server is not setup. Please check with your hosting support.
                     </p>
                     <p>
-                        To debug this and other possible issues we strongly recommend <a href="http://wpdocs.latepoint.com/how-to-enable-debug-log/%20and%20then%20checking%20your%20debug.log">enabling debug mode</a> when testing, to check if there are any other errors.
+                        You can use this plugin to test if your mail server is working: <a href="https://wordpress.org/plugins/check-email/">https://wordpress.org/plugins/check-email/</a> 
                     </p>
+                    <p>Sometimes some mail servers don’t send emails to the same domain, so if you are testing bookings with a user who has the same email address as your WordPress mail server.</p>
                     
                    
-
+                   
                 </div>
             </div>
         </div>
