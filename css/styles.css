@@ -41,22 +41,6 @@ hr {
   margin-left: 30px;
 }
 
-@media (min-width: 320px) {
-  .index__input {
-    width: 50%;
-    padding: 15px 20px 15px 45px;
-    font-size: 26px;
-    border: none;
-    box-shadow: none;
-    border-bottom: 1px solid #2e58ff;
-    outline: none;
-    background-color: transparent;
-    color: blue;
-    margin-bottom: 40px;
-    margin-left: 30px;
-  }
-}
-
 .index-post__title a {
   margin-left: 30px;
   color: #314990;
@@ -67,6 +51,20 @@ hr {
 .index-post__title a:hover {
   color: #166bec;
   text-decoration: underline;
+}
+
+.index__input {
+  width: 50%;
+  padding: 15px 20px 15px 45px;
+  font-size: 26px;
+  border: none;
+  box-shadow: none;
+  border-bottom: 1px solid #2e58ff;
+  outline: none;
+  background-color: transparent;
+  color: blue;
+  margin-bottom: 40px;
+  margin-left: 30px;
 }
 
 .lpl-container {
@@ -136,14 +134,38 @@ h3 {
   color: #373844;
 }
 
-.single-post-container-w {
-  display: flex;
-  box-sizing: border-box;
-  font-weight: 400;
-  line-height: 1.4;
-  color: #373844;
-  font-size: 14px;
-  justify-content: center;
+@media (min-width: 320px) {
+  .single-post-container-w {
+    display: flex;
+    box-sizing: border-box;
+    font-weight: 400;
+    line-height: 1.4;
+    color: #373844;
+    font-size: 14px;
+    justify-content: center;
+  }
+}
+@media (min-width: 610px) {
+  .single-post-container-w {
+    display: flex;
+    box-sizing: border-box;
+    font-weight: 400;
+    line-height: 1.4;
+    color: #373844;
+    font-size: 14px;
+    justify-content: center;
+  }
+}
+@media (min-width: 1200px) {
+  .single-post-container-w {
+    display: flex;
+    box-sizing: border-box;
+    font-weight: 400;
+    line-height: 1.4;
+    color: #373844;
+    font-size: 14px;
+    justify-content: center;
+  }
 }
 
 @media (min-width: 320px) {
@@ -154,6 +176,7 @@ h3 {
 @media (min-width: 610px) {
   .index-posts-w {
     display: block;
+    width: 40%;
   }
 }
 @media (min-width: 1200px) {
@@ -162,12 +185,41 @@ h3 {
   }
 }
 
-.single-post-w .post-content .wp-image {
-  background: #fff;
-  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2), 0px 20px 50px rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
-  margin: 60px;
-  padding: 10px;
+@media (min-width: 320px) {
+  .single-post-w .post-content .wp-image {
+    background: #fff;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2), 0px 20px 50px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 10px;
+    width: 25rem;
+    height: 10rem;
+  }
+}
+@media (min-width: 610px) {
+  .single-post-w .post-content .wp-image {
+    background: #fff;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2), 0px 20px 50px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 10px;
+    width: 30rem;
+    height: 15rem;
+  }
+}
+@media (min-width: 1200px) {
+  .single-post-w .post-content .wp-image {
+    background: #fff;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2), 0px 20px 50px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 10px;
+    width: 40rem;
+    height: 20rem;
+  }
 }
 
 .single-post-w .single-post-meta {
@@ -194,6 +246,55 @@ h3 {
     width: 600px;
     height: 550px;
     justify-content: center;
+  }
+}
+
+@media (min-width: 320px) {
+  p {
+    margin-top: 0;
+    margin-bottom: 10px;
+    width: 100%;
+  }
+}
+@media (min-width: 610px) {
+  p {
+    margin-top: 0;
+    margin-bottom: 10px;
+  }
+}
+@media (min-width: 1200px) {
+  p {
+    margin-top: 0;
+    margin-bottom: 10px;
+  }
+}
+
+a {
+  color: #2F58FF;
+  text-decoration: none;
+  background-color: transparent;
+}
+
+@media (min-width: 320px) {
+  .doc-1-a {
+    text-align: center;
+    color: #2F58FF;
+    text-decoration: none;
+    background-color: transparent;
+  }
+}
+@media (min-width: 610px) {
+  .doc-1-a {
+    color: #2F58FF;
+    text-decoration: none;
+    background-color: transparent;
+  }
+}
+@media (min-width: 1200px) {
+  .doc-1-a {
+    color: #2F58FF;
+    text-decoration: none;
+    background-color: transparent;
   }
 }
 
@@ -266,12 +367,6 @@ pre {
   text-decoration: underline;
 }
 
-a {
-  color: #2F58FF;
-  text-decoration: none;
-  background-color: transparent;
-}
-
 .single-post-w .single-post-meta .sp-categories ul li {
   line-height: 1.2;
 }
@@ -288,11 +383,6 @@ a {
 
 .single-post-w .post-content {
   font-size: 18px;
-}
-
-p {
-  margin-top: 0;
-  margin-bottom: 10px;
 }
 
 .single-post-w .post-content {

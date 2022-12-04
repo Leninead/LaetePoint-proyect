@@ -1,4 +1,34 @@
+
+
+
+
 .single-post-container-w {
+    @include small {
+        display: flex;
+        box-sizing: border-box;
+      
+        font-weight: 400;
+        line-height: 1.4;
+        color: #373844;
+        font-size: 14px;
+         
+        justify-content: center;
+    }
+
+    @include medium {
+        display: flex;
+        box-sizing: border-box;
+      
+        font-weight: 400;
+        line-height: 1.4;
+        color: #373844;
+        font-size: 14px;
+         
+        justify-content: center;
+    }
+
+    @include large {
+        
     display: flex;
     box-sizing: border-box;
   
@@ -8,6 +38,11 @@
     font-size: 14px;
      
     justify-content: center;
+    }
+
+
+
+
 
 
 
@@ -20,6 +55,7 @@
 
     @include medium {
         display: block;
+        width: 40%;
     }
 
     @include large {
@@ -30,11 +66,43 @@
 
 .single-post-w .post-content .wp-image {
 
-    background: #fff;
-    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2), 0px 20px 50px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    margin: 60px;
-    padding: 10px;
+    @include small {
+        background: #fff;
+        box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2), 0px 20px 50px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+       margin-top: 20px;
+       margin-bottom:  20px;
+        padding: 10px;
+        width: 25rem;
+        height: 10rem;
+    }
+
+    @include medium {
+        background: #fff;
+        box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2), 0px 20px 50px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        margin-top: 20px;
+       margin-bottom:  20px;
+        padding: 10px;
+        width: 30rem;
+        height: 15rem;
+    }
+
+    @include large {
+        background: #fff;
+        box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2), 0px 20px 50px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        margin-top: 20px;
+        margin-bottom:  20px;
+        padding: 10px;
+        width: 40rem;
+        height: 20rem;
+    }
+   
+
+
+
+   
      
 
 
@@ -77,9 +145,57 @@
 
     
 
+}
+
+p{
+    @include small {
+        margin-top: 0;
+        margin-bottom: 10px;
+        width: 100%;
+    }
+
+    @include medium {
+        margin-top: 0;
+        margin-bottom: 10px;
+    }
+
+    @include large{
+        margin-top: 0;
+margin-bottom: 10px;
+    }
 
 
- 
-   
+
+}
+
+
+
+
+
+a {
+    color:#2F58FF;
+text-decoration: none;
+background-color: transparent;
+}
+
+.doc-1-a {
+    @include small {
+        text-align: center;
+        color:#2F58FF;
+        text-decoration: none;
+        background-color: transparent;
+    }
+
+    @include medium {
+        color:#2F58FF;
+        text-decoration: none;
+        background-color: transparent;
+    }
+
+    @include large{
+        color:#2F58FF;
+        text-decoration: none;
+        background-color: transparent;
+    }
 
 }
