@@ -22,7 +22,7 @@
         display: block;
     }
 
-    @include medium {
+    @include large {
         width: 40%;
     }
    
@@ -49,21 +49,37 @@
     margin-bottom: 20px;
     margin-top: 20px;
   }
-    
+
 
 
 
 .wp-image {
-    display: flex;
-    border-radius: 6px;
-    width: 600px;
-    height: 550px;
-    justify-content: center;
+    @include small {
+        display: flex;
+        border-radius: 6px;
+        width:  800px;
+        height: 550px;
+        justify-content: center;
+    }
+
+    @include medium {
+        
+    }
+
+    @include large{
+        display: flex;
+        border-radius: 6px;
+        width: 600px;
+        height: 550px;
+        justify-content: center;
+    }
+
+
+    
+
+
+
+ 
    
 
-}
-
-p {
-    display: flex;
-    justify-content: center;
 }

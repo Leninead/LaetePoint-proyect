@@ -197,6 +197,11 @@ h3 {
   }
 }
 
+p {
+  display: flex;
+  justify-content: center;
+}
+
 .single-post-container-w .single-post-w {
   -webkit-box-flex: 1;
   flex: 1;
@@ -210,6 +215,7 @@ h3 {
 
 .single-post-w pre {
   overflow-x: auto;
+  font: normal 10pt Consolas, Monaco, monospace;
   padding: 15px;
   border-radius: 4px;
 }
@@ -274,6 +280,10 @@ a {
 
 .single-post-w .single-post-meta .sp-categories ul li {
   line-height: 1.2;
+}
+
+.single-post-w .single-post-meta .sp-categories ul {
+  list-style: none;
 }
 
 .single-post-w .single-post-meta .sp-tags a {
@@ -341,4 +351,4 @@ strong {
   font-weight: bolder;
 }
 
-/*# sourceMappingURL=styles.css.map */
+/*# sourceMappingURL=syles.css.map */
